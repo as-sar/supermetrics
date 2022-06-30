@@ -21,7 +21,7 @@ class AveragePostsPerUserCalculator extends AbstractCalculator
     {
         $authorId = $postTo->getAuthorId();
         if (null === $authorId) {
-            throw new UnexpectedValueException('author_id cannot be null');
+            throw new UnexpectedValueException('authorId cannot be null');
         }
 
         $this->postsByUser[$authorId] = $this->postsByUser[$authorId] ?? 0;
