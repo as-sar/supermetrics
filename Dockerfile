@@ -16,6 +16,9 @@ RUN apt-get update -y \
 
 RUN pecl install memcached
 
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
+
 RUN a2enmod rewrite
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer

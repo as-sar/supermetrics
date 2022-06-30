@@ -11,6 +11,8 @@ services:
       target: local
     ports:
       - "7777:80"
+    volumes:
+      - .:/app
 
 networks:
   default:
